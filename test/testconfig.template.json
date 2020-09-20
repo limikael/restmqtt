@@ -1,0 +1,17 @@
+{
+	"server": "gqtt://postman.cloudmqtt.com",
+	"username": "hbpiywwf",
+	"password": "",
+	"port": "13342",
+
+	"listen": 8080,
+
+	"topics": {
+		"hello": {
+			"url": "http://localhost/log.php"
+		},
+
+		"testreq": {
+		}
+	}
+}

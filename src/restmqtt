@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const RestMqtt=require("./RestMqtt.js");
+const path=require("path");
+
+if (process.argv.length!=3) {
+	console.log("Usage: restmqtt <settingsfile>")
+	process.exit();
+}
+
+let settings=require(path.resolve(process.argv[2]));
+
+let restmqtt=new RestMqtt(settings)
+restmqtt.run();
