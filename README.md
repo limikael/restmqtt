@@ -11,7 +11,7 @@ It is started simply with:
 
 The configuration file should look like:
 
-`
+```
 {
 	"server": "gqtt://mqttserver.example.com",
 	"username": "<mqttuser>",
@@ -28,4 +28,4 @@ The configuration file should look like:
 		"test": {}
 	}
 }
-`
+```
