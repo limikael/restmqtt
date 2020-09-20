@@ -3,13 +3,13 @@ Translates between MQTT and REST.
 
 This script is intended to be run continously on a server. It connects to an MQTT broker and also acts as a webserver and accepts HTTP requests. It then translates between these protocols as explained below.
 
-## Configuration and Starting
+## Usage
 
 It is started simply with:
 
     restmqtt configfile.json
 
-The configuration file should look like:
+The configuration file should look something like this:
 
 ```
 {
@@ -29,3 +29,7 @@ The configuration file should look like:
 	}
 }
 ```
+
+The program then does 3 things:
+
+### Forward MQTT messages to a REST url
