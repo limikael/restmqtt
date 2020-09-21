@@ -142,8 +142,17 @@ class RestMqtt {
 		this.app.post("/publish/*",this.handlePublishRequest);
 		this.app.post("/req/*",this.handleReqRequest);
 
-		this.app.listen(this.settings.listen,()=>{
-			console.log("** Listening to: "+this.settings.listen);
+		let listen=process.env.PORT;
+		if (this.settings.listen)
+			listen=this.settings.listen;
+
+		if (!listen) {
+			console.log("No listen port");
+			return;
+		}
+
+		this.app.listen(listen,()=>{
+			console.log("** Listening to: "+listen);
 		});
 	}
 
